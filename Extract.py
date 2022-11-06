@@ -20,11 +20,10 @@ folderList = pd.read_csv('E:/list.csv', sep = '\t')
 extractor = featureextractor.RadiomicsFeatureExtractor()
 featureClasses = getFeatureClasses()
 settings = {}
-settings['binWidth'] = 25
-settings['resampledPixelSpacing'] = None
-settings['resampledPixelSpacing'] = [1.25, 1.25, 1.25]  
-settings['interpolator'] = 'sitkBSpline'
-settings['verbose'] = True
+# settings['binWidth'] = 25
+# settings['resampledPixelSpacing'] = [1.25, 1.25, 1.25]  
+# settings['interpolator'] = 'sitkBSpline'
+# settings['verbose'] = True
 extractor.enableImageTypeByName('Wavelet')
 extractor.enableImageTypeByName('LoG', customArgs={'sigma':[0.5, 1, 1.5, 2, 2.5]})
 
